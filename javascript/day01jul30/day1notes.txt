@@ -1,0 +1,4 @@
+Tools
+1.Nodejs
+2.vscode
+3.Git setup
