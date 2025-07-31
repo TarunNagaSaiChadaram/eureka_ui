@@ -1,0 +1,6 @@
+let a =10
+let b=20
+
+console.log(`Add of ${a} and ${b} is ${a+b}`);
+console.log('Hi')
+window.alert(`Addition of ${a} and ${b} is ${a + b}`); // runs in  browser but not in  nodejs

@@ -1,0 +1,5 @@
+ol>li{Car-$}*5
+
+select>option*10{country-$}
+
+table>tr*10>td*5{data-$}
