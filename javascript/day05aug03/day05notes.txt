@@ -1,0 +1,12 @@
+About functions.
+
+predefined and userdefined functions
+--predefined functions(pre bulit functions)
+  eg:console().log,Math.max()
+--user defined(built by us)
+
+function types
+
+function dec vs function exp
+
+reg function and arrow function

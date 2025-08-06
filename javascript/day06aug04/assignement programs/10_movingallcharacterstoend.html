@@ -1,0 +1,15 @@
+<script>
+    let a="hello@#hi&";
+    let alph=''
+    let spec=''
+    for(let i=0;i<a.length;i++){
+        if(a[i].match(/[a-z 0-9]/gi)){
+            alph=alph+a[i]
+        }
+        else{
+            spec=spec+a[i]
+        }
+    }
+    console.log(alph);
+    console.log(alph+spec);
+</script>

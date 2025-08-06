@@ -1,0 +1,22 @@
+<html>
+<body>
+    <button id="btn1">Btn-1</button>
+    <button id="btn2">Btn-2</button>
+    <button id="btn3">Btn-3</button>
+    <button id="btn4">Btn-4</button>
+    <script>
+        /*function changeColor(){  //here this 
+            this.style.backgroundColor='red';
+            console.log(this);
+        }*/
+        let changeColor=()=>{
+            console.log(this);
+            this.style.backgroundColor='red';
+        }
+        document.getElementById('btn1').addEventListener('click',changeColor);
+        document.getElementById('btn2').addEventListener('click',changeColor);
+        document.getElementById('btn3').addEventListener('click',changeColor);
+        document.getElementById('btn4').addEventListener('click',changeColor);
+    </script>
+</body>
+</html>

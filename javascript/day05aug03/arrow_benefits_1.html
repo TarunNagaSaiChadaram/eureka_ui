@@ -1,0 +1,21 @@
+<script>
+    class Student{
+        firstname='Tarun';
+        lastname='Chadaram';
+
+        // fullName1(){//reg func
+        //     console.log(this.firstname,this.lastname,this);
+        // }
+
+        fullName2=()=>{//arrow function
+            console.log(this.firstname,this.lastname,this)
+
+        }
+    }
+    let std1=new Student();
+    // std1.fullName1();
+    std1.fullName2();
+
+    // setTimeout(std1.fullName1,2000);//this in reg function becoming dynamic leading to window
+    // setTimeout(std1.fullName2,4000);
+</script>

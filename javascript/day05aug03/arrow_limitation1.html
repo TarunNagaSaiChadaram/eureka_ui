@@ -1,0 +1,16 @@
+<script>
+    let user={
+        firstname:'Tarun',
+        lastname:'Chadaram',
+        fullname1:function(){//reg function this is here adjusted by how and where it is called down there in line 14
+            console.log(this.firstname,this.lastname);
+
+        },
+        fullname2 :()=>{//this is here adjusted by where function is defined
+            console.log(this.firstname,this.lastname,this);
+
+        }
+    }
+    user.fullname1();
+    user.fullname2();
+</script>
