@@ -27,6 +27,10 @@ export class Databinding {
   secondnumber:number=0;
   opt:string=""
 
+  count:number=0;
+
+  color:string="white";
+
   totoggel(){
     this.isitvis=!this.isitvis;
   }

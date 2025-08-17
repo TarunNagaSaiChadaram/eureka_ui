@@ -72,3 +72,34 @@
         }}
     </div>
   </div>
+
+  <div class="border border-3 rounded-3 p-2 m-2">
+    <div>5.Create the inp box and toggel text to pass and vice verca</div>
+    <input type="{{flag ? 'text' : 'password'}}"/>
+    <button class="btn btn-primary mx-2" (click)="flag=!flag">Toggel</button>
+  </div>
+
+  <div class="border border-3 rounded-3 p-2 m-2">
+    <div>5.Create the inp box and toggel text to pass and vice verca</div>
+    <input type="{{flag ? 'text' : 'password'}}"/>
+    <button class="btn btn-primary mx-2" (click)="flag=!flag">Toggel</button>
+  </div>
+  
+  
+  <div class="border border-3 rounded-3 p-2 m-2">
+    <div>6.create a counter example with 3 controls(increment,decrement,reset)</div>
+    <h3>Present counter value:{{count}}</h3>
+    <button class="btn btn-primary mx-2" (click)="count=count+1">increment</button>
+    <button class="btn btn-primary mx-2" (click)="count=count-1">decrement</button>
+    <button class="btn btn-primary mx-2"(click)="count=0">reset</button>
+  </div>
+
+  <div class="border border-3 rounded-3 p-2 m-2" [style.backgroundColor]='color'>
+    <div>7.Have a toggle button and control Dark/Light theme of a page.</div>
+    <button class="btn btn-primary mx-2" (click)="color=color=='black'?'white':'black'" >toggel</button>
+  </div>
+
+
+
+
+
