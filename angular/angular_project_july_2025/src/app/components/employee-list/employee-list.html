@@ -1,0 +1,28 @@
+<h3 class="text-center">Product List</h3>
+<input type="text" name="Search for item" id="">
+<div class="container">
+  <div class="row">
+    @for(prod of products | paginate: { itemsPerPage: 4, currentPage: p};track $index){
+    <div class="col-sm-3">
+      <div class="card">
+        <img src="{{prod.image}}" class="card-img-top" alt="..." height="200">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{prod.title}}</h5>
+          <p class="card-text">{{prod.category}}</p>
+          <p class="card-text">{{prod.price}}$</p>
+          <p class="card-text text-truncate">{{prod.description}}</p>
+          <p class="card-text">
+            @for(star of [1,2,3,4,5];track star){
+                <fa-icon [icon]="prod.rating.rate>=star?solidStar:regStar"></fa-icon>
+            }
+            {{prod.rating.rate}}</p>
+          <a href="#" class="btn btn-primary">Details</a>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <div class='col-sm-4 offset-4 mt-2'>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

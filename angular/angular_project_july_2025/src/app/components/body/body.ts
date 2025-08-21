@@ -1,9 +1,18 @@
 import { Component } from '@angular/core';
 import { Databinding } from '../databinding/databinding';
+import { Directives } from '../directives/directives';
+import { EmployeeList } from '../employee-list/employee-list';
+import { Demo1 } from '../demo1/demo1';
+import { Products } from '../products/products';
+import { EmployeeCRUD } from '../employee-crud/employee-crud';
 
 @Component({
   selector: 'app-body',
-  imports: [Databinding],
+  imports: [//Directives,
+  //EmployeeList,
+//Demo1,
+//Products
+EmployeeCRUD],
   templateUrl: './body.html',
   styleUrl: './body.css'
 })

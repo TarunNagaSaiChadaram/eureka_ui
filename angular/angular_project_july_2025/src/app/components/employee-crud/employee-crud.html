@@ -1,0 +1,98 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"> @if(takenEmp){ {{takenEmp.name}} } details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            @if(takenEmp){
+                ID:{{takenEmp.id}}<br>
+                Name:{{takenEmp.name}}<br>
+                Email:{{takenEmp.email}}<br>
+                Phone:{{takenEmp.phone}}
+            }
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div> Employee CRUD</div>
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div>display list of employees in a table(data comes from an array)</div>
+    <table class="table table-bordered">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>address</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>company</th>
+            <th>action</th>
+        </tr>
+        <tbody>
+            
+            @for(emp of employeedetailsArr;track emp.id){
+                <tr>
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.username}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.address.city}}</td>
+                    <td>{{emp.phone}}</td>
+                    <td>{{emp.website}}</td>
+                    <td>{{emp.company.name}}</td>
+                    <td>
+                        <fa-icon [icon]='faTrash' (click)="deletingRecord(emp.id)"/>
+                        <fa-icon [icon]='faEye' data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="seeEmp(emp)"/>
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <h5>Add new Employee</h5>
+    <div>
+        Id:
+        <input type="text " placeholder="ID" [(ngModel)]="new_emp.id">
+    </div>
+    <div>
+        Name:
+        <input type="text " placeholder="Name" [(ngModel)]="new_emp.name" >
+    </div>
+    <div>
+        Username:
+        <input type="text" placeholder="Username" [(ngModel)]="new_emp.username">
+    </div>
+    <div>
+        Email:
+        <input type="text" placeholder="Email" [(ngModel)]="new_emp.email">
+    </div>
+    <div>
+        city:
+        <input type="text" placeholder="city" [(ngModel)]="new_emp.address.city">
+    </div>
+    <div>
+        phone:
+        <input type="text" placeholder="phone" [(ngModel)]="new_emp.phone">
+    </div>
+    <div>
+        Website:
+        <input type="text" placeholder="Website" [(ngModel)]="new_emp.website">
+    </div>
+    <div>
+        company:
+        <input type="text" placeholder="company" [(ngModel)]="new_emp.company.name">
+    </div>
+    <div>
+        <button class="btn btn-success" (click)="addEmployee()">Submit</button>
+    </div>
+</div>

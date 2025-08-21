@@ -4,14 +4,12 @@ import { Categories } from './components/categories/categories';
 import { Carousel } from './components/carousel/carousel';
 import { Body } from './components/body/body';
 import { Footer } from './components/footer/footer';
+import { Directives } from './components/directives/directives';
 
 @Component({
   selector: 'app-root',
   imports: [Navbar,
-  Categories,
-Carousel,
-Body,
-Footer],
+Body],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
