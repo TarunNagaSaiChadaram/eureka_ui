@@ -1,0 +1,104 @@
+<h3 >pipes-demo assignment</h3>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div>Create a custom pipe(ordinal) which takes a number as input and returns in ordinal format</div>
+    <div>
+        number:
+        <input type="number" name="num1" [(ngModel)]="num1">
+    </div>
+    <div>
+        {{num1|numbersuffix}}
+    </div>
+</div>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div>create a custom pipe(Roman) which takes a number as input and returns its equivalent roman value</div>
+    <div>
+        Enter the number:
+        <input type="number" name="num2" [(ngModel)]="num2">
+    </div>
+    <div>
+        {{num2|romanpipe}}
+    </div>
+</div>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div> create a custom pipe called 'age' which takes a date as input and returns the age in years.</div>
+    <div>
+        Enter the Date:
+        <input type="date" name="date1" [(ngModel)]="date1">
+    </div>
+    <div>
+        {{date1|agepipe}}
+    </div>
+</div>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div> declare an array of employee objects. display them in a table.
+        create a custom pipe 'Salutation' that will add 'mr. / miss.' before the employee name.</div>
+    <div>
+        <table class="table table-bordered">
+
+            <tr>
+                <th>eId</th>
+                <th>Name</th>
+                <th>sal</th>
+                <th>gender</th>
+            </tr>
+
+            <tbody>
+                @for(emp of employees;track emp.eId){
+                    <tr>
+                        <td>{{emp.eId}}</td>
+                        <td>{{emp.name|salutation:emp.gender}}</td>
+                        <td>{{emp.sal}}</td>
+                        <td>{{emp.gender}}</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <div>
+        declare an array of employee objects. display them in a table. 
+   add a search-box above the table. create a custom-pipe to filter/search employees data.
+    </div>
+    <div>
+        Search:
+        <input type="text" [(ngModel)]="searchtext">
+    </div>
+    <div>
+        <table class="table table-bordered">
+
+            <tr>
+                <th>eId</th>
+                <th>Name</th>
+                <th>sal</th>
+                <th>gender</th>
+            </tr>
+
+            <tbody>
+                @for(emp of employees|searching:searchtext; track emp.eId){
+                    <tr>
+                        <td>{{emp.eId}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.sal}}</td>
+                        <td>{{emp.gender}}</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+

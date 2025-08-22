@@ -5,6 +5,7 @@ import { faTrash} from '@fortawesome/free-solid-svg-icons';
 import{faEye} from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';	
 import { FormsModule } from '@angular/forms';
+import Snackbar from 'awesome-snackbar';
 @Component({
   selector: 'app-employee-crud',
   imports: [FontAwesomeModule,
@@ -68,11 +69,13 @@ addEmployee(){
     website:"",
     company:{name:""}
   };
+};
+
+openSnackbar(){
+  new Snackbar('Employee successfully added',
+      { position: 'top-center', theme: 'light', timeout: 5000, actionText: 'X' }
+    );
 }
-
-
-
-
 
 
 }

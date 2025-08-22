@@ -93,6 +93,6 @@
         <input type="text" placeholder="company" [(ngModel)]="new_emp.company.name">
     </div>
     <div>
-        <button class="btn btn-success" (click)="addEmployee()">Submit</button>
+        <button class="btn btn-success" (click)="addEmployee();openSnackbar()">Submit</button>
     </div>
 </div>
