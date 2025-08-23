@@ -1,0 +1,23 @@
+<div class="border border-3 rounded-3 p-2 m-2">
+    <h5>Add new Employee</h5>
+    <div>
+        Id:
+        <input type="number " placeholder="ID" [(ngModel)]="new_emp.eId">
+    </div>
+    <div>
+        Name:
+        <input type="text " placeholder="Name" [(ngModel)]="new_emp.name" >
+    </div>
+    <div>
+        Sal:
+        <input type="text " placeholder="Salary" [(ngModel)]="new_emp.sal" >
+    </div>
+    <div>
+        Gender:
+        <input type="text " placeholder="Name" [(ngModel)]="new_emp.gender" >
+    </div>
+    
+    <div>
+        <button class="btn btn-success" (click)="addEmployee(new_emp)">Submit</button>
+    </div>
+</div>

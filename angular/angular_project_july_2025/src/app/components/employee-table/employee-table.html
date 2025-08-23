@@ -1,0 +1,25 @@
+<div>
+    <div>Pass data from EmployeeCRUD to EmployeeTable, EmployeeTable should display the data in table</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>eID</th>
+                <th>Name</th>
+                <th>Sal</th>
+                <th>Gender</th>
+                <th>action</th>
+            </tr>
+            <tbody>
+                @for(emp of employees;track emp.eId){
+                    <tr>
+                        <td>{{emp.eId}}</td>
+                        <td>{{emp.name}}</td>
+                        <td>{{emp.sal}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td><button (click)="deletetherec(emp.eId)">delete</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="container border border-3 my-2">
+    <div class="text-center">
+        <h3>This is EmployeeCrud (Parent)</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 border border-3 my-2">
+            <app-employee-table [employees]="employees" (delEve)="updatedArr($event)" ></app-employee-table>
+        </div>
+        <div class="col-sm-6 border border-3 my-2">
+            <app-employee-add (addEve)="newArr($event)"></app-employee-add>
+        </div>
+    </div>
+</div>
