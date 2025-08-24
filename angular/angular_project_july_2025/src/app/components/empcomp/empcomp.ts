@@ -16,7 +16,7 @@ allemp:any;
 maleemp:any;
 femaleemp:any;
 
-selectedemp:string="all";
+selectedemp:string="";
 ngOnInit(){
   console.log(this.empService.getAllEmployees());
   this.allemp=this.empService.getAllEmployees();
@@ -33,8 +33,12 @@ filteredEmp(){
   else if(this.selectedemp=="femaleemp"){
     return this.femaleemp;
   }
-  else{
+  else if (this.selectedemp=="allemp"){
+
     return this.allemp;
+  }
+  else{
+    return ""
   }
 }
 }
