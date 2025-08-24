@@ -7,6 +7,7 @@ import { Products } from '../products/products';
 import { EmployeeCRUD } from '../employee-crud/employee-crud';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Empcrud } from '../empcrud/empcrud';
+import { Empcomp } from '../empcomp/empcomp';
 
 @Component({
   selector: 'app-body',
@@ -16,7 +17,8 @@ import { Empcrud } from '../empcrud/empcrud';
 //Products
 //EmployeeCRUD
 //PipesDemo
-Empcrud],
+//Empcrud
+Empcomp],
   templateUrl: './body.html',
   styleUrl: './body.css'
 })

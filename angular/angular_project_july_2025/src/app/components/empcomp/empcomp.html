@@ -1,0 +1,37 @@
+<p>empcomp works!</p>
+<div>
+    <div class="class border border-3 rounded-3 p-2 m-2">
+        <div>Display List of Employees in a table / Card
+            have a dropdown with 3 values- allEmployees , maleEmployees , femaleEmployees
+            based on the dropdown value selected, employee data should be shown
+        </div>
+        <div>
+            <select name="typeemp" id="typeofemp" [(ngModel)]="selectedemp">
+                <option value="allemp">All Employess</option>
+                <option value="maleemp">Male Employees</option>
+                <option value="femaleemp">Female Employees</option>
+            </select>
+        </div>
+
+        <div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>eId</th>
+                    <th>name</th>
+                    <th>sal</th>
+                    <th>gender</th>
+                </tr>
+                <tbody>
+                    @for(emp of filteredEmp();track $index){
+                        <tr>
+                            <td>{{emp.eId}}</td>
+                            <td>{{emp.name}}</td>
+                            <td>{{emp.sal}}</td>
+                            <td>{{emp.gender}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
