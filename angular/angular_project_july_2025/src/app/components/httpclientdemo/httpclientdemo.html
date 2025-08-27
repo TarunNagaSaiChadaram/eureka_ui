@@ -1,0 +1,74 @@
+@if(!isLoad){
+    <div>
+        <div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>id</th>
+                    <th>firstName</th>
+                    <th>lastName</th>
+                    <th>email</th>
+                    <th>gender</th>
+                    <th>sal</th>
+                    <th>Action</th>
+
+                </tr>
+                <tbody>
+                    @for(emp of employees;track $index){
+                        <tr>
+                            <td>{{emp.id}}</td>
+                            <td>{{emp.firstName}}</td>
+                            <td>{{emp.lastName}}</td>
+                            <td>{{emp.email}}</td>
+                            <td>{{emp.gender}}</td>
+                            <td>{{emp.sal}}</td>
+                            <td>
+                                <button class="button-secondary" (click)="deleteEmp(emp)">Delete</button>
+                                <button class="button-secondary" (click)="editEmp(emp)" >Edit</button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+@else{
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVDE1cLb5tx35H3cnzc9GwYhRXgBZ2Ta1Lfw&s" alt="">
+        <p>Loading Please Wait...</p>
+    </div>
+}
+
+<div class="border border-3 rounded-3 p-2 m-2">
+    <h5>Add new Employee</h5>
+    <div>
+        Id:
+        <input type="number " placeholder="ID" [(ngModel)]="new_emp.id">
+    </div>
+    <div>
+        firstName:
+        <input type="text " placeholder="firstName" [(ngModel)]="new_emp.firstName" >
+    </div>
+    <div>
+        lastName:
+        <input type="text " placeholder="lastName" [(ngModel)]="new_emp.lastName" >
+    </div>
+    <div>
+        email:
+        <input type="text " placeholder="email" [(ngModel)]="new_emp.email" >
+    </div>
+    <div>
+        gender:
+        <input type="text " placeholder="gender" [(ngModel)]="new_emp.gender" >
+    </div>
+    <div>
+        sal:
+        <input type="number" placeholder="sal" [(ngModel)]="new_emp.sal" >
+    </div>
+    
+    <div>
+        <button class="btn btn-success" (click)="puttingUsers(new_emp)">Submit</button>
+        <button class="btn btn-success mx-2 px-2" (click)="updateEmp(new_emp)">Update</button>
+    </div>
+</div>
