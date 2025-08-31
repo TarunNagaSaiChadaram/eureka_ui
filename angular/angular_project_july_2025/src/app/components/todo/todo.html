@@ -1,0 +1,30 @@
+<h3>ToDo Assignment</h3>
+<div>
+    <div class="border border-3 rounded-3 p-2 m-2">
+        <table class="table table-bordered">
+            <tr>
+                <th>Task</th>
+                <th>Status</th>
+                <th>action</th>
+            </tr>
+
+            @for(t of todos();track $index){
+                <tr>
+                    <td>{{t.text}}</td>
+                    <td>{{t.done?'Completed':'Pending'}}</td>
+                    <td><button (click)="toggel(t)">toggel</button></td>
+                </tr>
+            }
+
+        </table>
+        <div>
+            Completed Todos:
+            {{completed_todos()}}
+        </div>
+
+        <div>
+            Pending Todos:
+            {{remaining_todos()}}
+        </div>
+    </div>
+</div>
