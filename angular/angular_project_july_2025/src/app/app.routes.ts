@@ -12,7 +12,4 @@ export const routes: Routes = [
     {path:'contactus',component:Contactus},
     {path:'',component:Home},
     {path:'**',component:Notfound},
-
-
-    
 ];
