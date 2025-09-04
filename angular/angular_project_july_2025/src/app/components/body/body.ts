@@ -14,6 +14,7 @@ import { TemplateDrivenform } from '../../template-drivenform/template-drivenfor
 import { ModelDrivenform } from '../../model-drivenform/model-drivenform';
 import { Formassignment } from '../formassignment/formassignment';
 import { RouterOutlet } from '@angular/router';
+import { FolderstructureAssignment } from '../folderstructure-assignment/folderstructure-assignment';
 
 @Component({
   selector: 'app-body',
@@ -31,7 +32,8 @@ import { RouterOutlet } from '@angular/router';
 // TemplateDrivenform
 //ModelDrivenform
 // Formassignment
-RouterOutlet],
+RouterOutlet,
+FolderstructureAssignment],
   templateUrl: './body.html',
   styleUrl: './body.css'
 })

@@ -1,0 +1,19 @@
+<h3 class="text-center">Assignment Project Structure</h3>
+
+<div>
+    <ul>
+        @for(eachitem of data.items;track eachitem){
+            <li>
+                {{eachitem.isFolder ?'Folder':'File'}} {{eachitem.name}}
+
+                @if (eachitem.isFolder && eachitem.items) {
+                        <ul>
+                            @for(subitem of eachitem.items ;track subitem){
+                                <li>{{subitem.isFolder?'Folder':'File'}} {{subitem.name}}</li>
+                            }
+                        </ul>
+                }
+            </li>
+        }
+    </ul>
+</div>
