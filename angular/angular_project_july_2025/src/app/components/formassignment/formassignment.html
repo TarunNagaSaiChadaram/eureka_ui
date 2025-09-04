@@ -1,0 +1,45 @@
+<h3 class="text-center">Form validation asssignment using Template driven form</h3>
+<div class="border border-3 rounded-3 p-3 col-sm-6 offset-3">
+    <form #myForm="ngForm" (submit)="submitassignmentForm(myForm.value)">
+        <p>
+            FirstName:
+            <input name="FirstName" #fName="ngModel" ngModel required minlength="5">
+            @if(fName.dirty && fName.hasError('minlength')){
+                <span class="text-danger">FirstName should be more than 5 letters</span>
+            }
+        </p>
+        <p>
+            Grade:
+            <label ><input type="radio" name="grade" ngModel value="A">A</label>
+            <label ><input type="radio" name="grade" ngModel value="B">B</label>
+            <label ><input type="radio" name="grade" ngModel value="C">C</label>
+        </p>
+        <p>
+            Hobbies:
+            <br>
+            <label ><input type="checkbox" name="hobbies" ngModel value="PS5">PS5</label><br>
+            <label ><input type="checkbox" name="hobbies" ngModel value="Cricket">Cricket</label><br>
+            <label ><input type="checkbox" name="hobbies" ngModel value="WebSeries">WebSeries</label><br>
+        </p>
+        <p>
+            Area of Interest:
+            <select name="interest" ngModel required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="AI">AI</option>
+                <option value="ML">Machine learning</option>
+                <option value="java">JAVA</option>
+            </select>
+        </p>
+        <p>
+            Description:
+            <textarea name="Description" ngModel required></textarea>
+        </p>
+        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">
+            submit
+        </button>
+        <button type="reset" class="btn btn-secondary mx-2">Reset</button>
+    </form>
+    <pre>
+        {{myForm.value|json}}
+    </pre>
+</div>

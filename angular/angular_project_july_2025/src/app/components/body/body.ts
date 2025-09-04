@@ -9,10 +9,16 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { Empcrud } from '../empcrud/empcrud';
 import { Empcomp } from '../empcomp/empcomp';
 import { Httpclientdemo } from '../httpclientdemo/httpclientdemo';
+import { Todo } from '../todo/todo';
+import { TemplateDrivenform } from '../../template-drivenform/template-drivenform';
+import { ModelDrivenform } from '../../model-drivenform/model-drivenform';
+import { Formassignment } from '../formassignment/formassignment';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
-  imports: [//Directives,
+  imports: [
+    //Directives,
   //EmployeeList,
 //Demo1,
 //Products
@@ -20,7 +26,12 @@ import { Httpclientdemo } from '../httpclientdemo/httpclientdemo';
 //PipesDemo
 //Empcrud
 //Empcomp
-Httpclientdemo],
+// Httpclientdemo
+// Todo
+// TemplateDrivenform
+//ModelDrivenform
+// Formassignment
+RouterOutlet],
   templateUrl: './body.html',
   styleUrl: './body.css'
 })
