@@ -1,1 +1,35 @@
 <p>contactus works!</p>
+<form #myForm="ngForm" (submit)="submitMyForm(myForm.value)">
+    <p>
+        FirstName:
+        <input name="FirstName" #fName="ngModel" ngModel required minlength="5">
+        @if(fName.dirty && fName.hasError('required')){
+            <span class="text-danger">FirstName is required</span>
+        }
+    </p>
+    <p>
+        LastName:
+        <input name="lastName" ngModel>
+    </p>
+    <p>
+        Email:
+        <input name="email" ngModel>
+    </p>
+    <div ngModelGroup="address">
+        <p>
+            City:
+            <input name="city" ngModel>
+        </p>
+        <p>
+            State:
+            <input name="state" ngModel>
+        </p>
+    </div>
+    <p>
+        Pincode:
+        <input name="pincode" ngModel>
+    </p>
+    <input type="reset" value="Reset" class="mx-2" >
+    <input type="submit" value="Submit" [disabled]="myForm.invalid"  >
+
+</form>
