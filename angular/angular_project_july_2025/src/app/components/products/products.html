@@ -23,7 +23,8 @@
                 <fa-icon [icon]="prod.rating.rate>=star?solidStar:regStar"></fa-icon>
             }
             {{prod.rating.rate}}</p>
-          <a href="#" class="btn btn-primary">Details</a>
+          <a href="#" class="btn btn-primary"  [routerLink]="['/productdetails']"
+          [queryParams]="{id:prod.id,name:prod.title,price:prod.price}">Details</a>
         </div>
       </div>
     </div>

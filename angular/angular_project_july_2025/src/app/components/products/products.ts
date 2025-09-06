@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar as solidStar} from '@fortawesome/free-solid-svg-icons';
 import { faStar  as regStar} from '@fortawesome/free-regular-svg-icons';
+import{RouterLink} from '@angular/router';
 @Component({
   selector: 'app-products',
   imports: [NgxPaginationModule,
     FontAwesomeModule,
+    RouterLink,
   FormsModule],
   templateUrl: './products.html',
   styleUrl: './products.css'

@@ -32,8 +32,8 @@ import { FolderstructureAssignment } from '../folderstructure-assignment/folders
 // TemplateDrivenform
 //ModelDrivenform
 // Formassignment
-RouterOutlet,
-FolderstructureAssignment],
+// FolderstructureAssignment,
+RouterOutlet],
   templateUrl: './body.html',
   styleUrl: './body.css'
 })
